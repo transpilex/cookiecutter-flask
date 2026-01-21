@@ -16,6 +16,6 @@
   "has_plugins_config": "n",
   "use_auth": "n",
   "_copy_without_render": [
-    "apps/templates/layouts/**"
+    "apps/templates/**.html"
   ]
 }
