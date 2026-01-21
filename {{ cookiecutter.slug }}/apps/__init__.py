@@ -15,15 +15,15 @@ login_manager = LoginManager()
 
 def register_extensions(app):
     db.init_app(app)
-    { % - if cookiecutter.use_auth != 'n' %}
+    {%- if cookiecutter.use_auth != 'n' %}
     login_manager.init_app(app)
-    { % - endif %}
+    {%- endif %}
 
 {%- if cookiecutter.use_auth != 'n' %}
 apps = ('authentication', 'pages',)
-{ % - else %}
+{%- else %}
 apps = ('pages',)
-{ % - endif %}
+{%- endif %}
 
 def register_blueprints(app):
     for module_name in apps:
