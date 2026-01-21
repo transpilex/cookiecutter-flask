@@ -1,0 +1,42 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+    <div>
+        <div>
+
+            <h4>Sign Up</h4>
+
+            {% if success %}
+                <p class="success">{% if msg %}{{ msg | safe }}{% endif %}</p>
+            {% else %}
+                <p class="danger">{% if msg %}{{ msg | safe }}{% endif %}</p>
+            {% endif %}
+
+
+            <form role="form" method="post" action="">
+
+                {{ form.hidden_tag() }}
+
+                <div>
+                    {{ form.username(class="form-control", placeholder="Username") }}
+                </div>
+                <div>
+                    {{ form.email(class="form-control", type="email", placeholder="Email") }}
+                </div>
+                <div>
+                    {{ form.password(class="form-control", type="password", placeholder="Password") }}
+                </div>
+
+                <button type="submit" name="register">Sign Up</button>
+            </form>
+        </div>
+
+        <div>
+            <p>Already have an account? <a href="{{ url_for('authentication_blueprint.login') }}">Log In</a></p>
+        </div>
+    </div>
+
+{% endblock %}

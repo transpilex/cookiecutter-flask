@@ -1,0 +1,38 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Log In{% endblock %}
+
+{% block content %}
+
+    <div>
+        <div>
+
+            <h4>Sign In</h4>
+
+            <p>
+                {% if msg %}
+                    {{ msg | safe }}
+                {% endif %}
+            </p>
+
+            <form role="form" method="post" action="">
+
+                {{ form.hidden_tag() }}
+
+                <div>
+                    {{ form.username(class="form-control", placeholder="Username") }}
+                </div>
+                <div>
+                    {{ form.password(class="form-control", type="password", placeholder="Password") }}
+                </div>
+
+                <button type="submit" name="login">Sign in</button>
+            </form>
+        </div>
+
+        <div>
+            <p>Don't have an account? <a href="{{ url_for('authentication_blueprint.register') }}">Sign Up</a></p>
+        </div>
+    </div>
+
+{% endblock %}

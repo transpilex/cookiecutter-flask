@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" {% block html_attribute %}{% endblock html_attribute %}>
+
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="shortcut icon" href="{{ config.ASSETS_ROOT }}/images/favicon.ico" />
+
+    {% block styles %}{% endblock styles %}
+
+    {% include 'partials/head-css.html' %}
+
+</head>
+<body {% block body_attribute %}{% endblock body_attribute %}>
+
+{% block preloader %}{% endblock preloader %}
+
+{% block content %}{% endblock content %}
+
+{% block scripts %}{% endblock scripts %}
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "My Awesome Project",
+  "slug": "{{ cookiecutter.name.lower()|replace(' ', '-')|replace('.', '-')|trim() }}",
+  "description": "",
+  "version": "1.0.0",
+  "ui_library": [
+    "None",
+    "Bootstrap",
+    "Tailwind"
+  ],
+  "frontend_pipeline": [
+    "None",
+    "Gulp",
+    "Vite"
+  ],
+  "has_plugins_config": "n",
+  "use_auth": "n",
+  "_copy_without_render": [
+    "apps/templates/layouts/**"
+  ]
+}
