@@ -34,8 +34,8 @@ const pluginFile = {
 
 
 const paths = {
-    baseDistAssets: "public/",  // build assets directory
-    baseSrcAssets: "public/",   // source assets directory
+    baseDistAssets: "apps/static/",  // build assets directory
+    baseSrcAssets: "apps/static/",   // source assets directory
 };
 
 {%- if cookiecutter.has_plugins_config == 'y' %}

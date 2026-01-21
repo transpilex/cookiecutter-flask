@@ -6,7 +6,7 @@ from flask_login import login_required
 from jinja2 import TemplateNotFound
 
 
-@blueprint.route('/index')
+@blueprint.route('/')
 {%- if cookiecutter.use_auth != 'n' %}
 @login_required
 {%- endif %}
