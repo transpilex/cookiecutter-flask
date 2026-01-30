@@ -9,12 +9,12 @@ const pixrem = require('pixrem');
 const plumber = require('gulp-plumber');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
-const gulUglifyES = require('gulp-uglify-es');
 const npmdist = require('gulp-npm-dist');
 const replace = require('gulp-replace');
 {%- if cookiecutter.ui_library == 'Tailwind' %}
 const tailwindcss = require('@tailwindcss/postcss');
 {%- else %}
+const gulUglifyES = require('gulp-uglify-es');
 const gulpSass = require('gulp-sass');
 const dartSass = require('sass');
 const tildeImporter = require('node-sass-tilde-importer');
